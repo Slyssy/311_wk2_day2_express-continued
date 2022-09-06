@@ -12,9 +12,11 @@ app.use(express.static('./public'));
 //* Importing Routers
 const contacts = require('./src/routers/contactRouters');
 const vehicles = require('./src/routers/vehicleRouters');
+const comments = require('./src/routers/commentRouters');
 
 app.use(contacts);
 app.use(vehicles);
+app.use(comments);
 
 app.listen(port, () => {
   console.log(`Web server is listening on port ${port}!`);
